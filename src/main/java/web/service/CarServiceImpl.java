@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class CarServiceImpl implements CarService{
+public class CarServiceImpl implements CarService {
 
 
     private List<Car> cars;
@@ -23,8 +23,8 @@ public class CarServiceImpl implements CarService{
         cars.add(new Car("Nissan", "370z", 400));
         cars.add(new Car("Porsche", "911", 420));
     }
-
-    public List<Car> outWithParam(Integer count){
+    @Override
+    public List<Car> outWithParam(Integer count) {
 
         if (count == null || count >= 5) {
             return cars;
